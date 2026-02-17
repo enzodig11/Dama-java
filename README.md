@@ -1,54 +1,128 @@
-# Dama italiana [![CI/CD](https://github.com/softeng2021-inf-uniba/progetto2021ter-pike/actions/workflows/ingsw2021.yml/badge.svg)](https://github.com/softeng2021-inf-uniba/progetto2021ter-pike/actions/workflows/ingsw2021.yml) [![Coverage Status](https://coveralls.io/repos/github/softeng2021-inf-uniba/progetto2021ter-pike/badge.svg?t=W0GCBL&service=github)](https://coveralls.io/github/softeng2021-inf-uniba/progetto2021ter-pike)
+# 🇮🇹 Dama Italiana -- Implementazione in Java
 
+## Descrizione del Progetto
 
+Questo progetto rappresenta un'implementazione completa del gioco della
+**Dama Italiana**, sviluppata in Java nell'ambito di un corso di
+Ingegneria del Software.
 
-La struttura della repository si presenta nel seguente modo:
-```
-|-- .github
-|    |-- workflows
-|    |      |-- ingsw2021.yml
-|-- build
-|    |-- reports
-|    |      |-- checkstyle
-|    |      |-- spotbugs
-|    |      |-- jacoco/tests
-|    |      |-- tests/test
-|–– config
-|    |–– checkstyle
-|–– doc
-|    |–– drawings
-|    |–– javadoc 
-|    |–– Report.md
-|–– gradle
-|–– lib
-|–– res
-|–– src
-|    |–– main
-|    |–– test
-|–– .gitignore
-|–– build.gradle
-|–– Assegnazione progetto.md
-|–– Guida per lo studente.md
-|–– README.md
-|–– gradlew
-|–– gradle.bat
-|–– settings.gradle
-```
+L'applicazione implementa le regole ufficiali del gioco, inclusi: -
+Movimenti validi - Catture obbligatorie - Promozione a dama -
+Determinazione della vittoria
 
-Nel seguito si dettagliano i ruoli dei diversi componenti:
-- **.github/workflows/ingsw2021.yml**: dettaglia le direttive per assicurare la *continuous integration* attraverso l’uso di GitHub Actions;
-- **build**: ospita la sottocartella *reports*, contenente gli output dei tool automatici di test e controllo di qualità;
-- **config**: ospita i file di configurazione. L’unica configurazione di base richiesta è quella per il tool checkstyle;
-- **doc**: in questa cartella deve essere inserita tutta la documentazione relativa al progetto. In particolare, in *drawings* dovranno essere salvati i diagrammi UML e *javadoc* ospiterà la documentazione generata automaticamente per il codice Java. Il file *Report.md* rappresenta la relazione finale del progetto;
-- **gradle**: contiene il jar per il sistema di gestione delle dipendenze *Gradle*.
-- **lib**: creata per includere eventuali *jar* di librerie esterne utilizzate dal progetto.
-- **res**: la cartella deve contenere tutte le risorse usate dal sistema (immagini, testi ecc.)
-- **src**: la cartella principale del progetto, in cui scrivere tutto il codice dell’applicazione. In *main* ci saranno i file sorgente e *test* conterrà i test di unità previsti.
-- **.gitignore**: specifica tutti i file che devono essere esclusi dal sistema di controllo versione.
-- **build.gradle**: esplicita le direttive e la configurazione per *Gradle*. 
-- **Assegnazione progetto.md**: fare riferimento a questo file per la descrizione dettagliata del progetto assegnato;
-- **Guida per lo studente.md:** elenca e descrive tutti i passi di configurazione necessari per attivare l’intero flusso di lavoro dietro lo sviluppo del progetto;
-- **gradlew & gradlew.bat**: sono i file eseguibili di *Gradle*, rispettivamente per Unix e per Windows. Vengono generati automaticamente da Eclipse;
-- **settings.gradle**: file di configurazione di *Gradle*. Anche quest’ultimo viene generato automaticamente da Eclipse.
+Il progetto segue principi di: - Programmazione Orientata agli Oggetti
+(OOP) - Clean Code - Testing automatico - Integrazione Continua
+(CI/CD) - Analisi statica del codice
 
-In alcune cartelle è possibile notare la presenza di un unico file nascosto `.keep`: questo ha il solo scopo di richiedere a Git l’inclusione delle cartelle in cui è contenuto (Git esclude dal *versioning* le cartelle vuote). Pertanto, il file può essere ignorato o eventualmente cancellato nel momento in cui si inserisca almeno un altro file all’interno della cartella.
+------------------------------------------------------------------------
+
+## Tecnologie Utilizzate
+
+-   Java\
+-   Gradle\
+-   JUnit\
+-   GitHub Actions\
+-   JaCoCo\
+-   Checkstyle & SpotBugs
+
+------------------------------------------------------------------------
+
+## Struttura della Repository
+
+    Dama-java/
+    │
+    ├── src/
+    │   ├── main/java/
+    │   └── test/java/
+    │
+    ├── build.gradle
+    ├── settings.gradle
+    ├── gradlew
+    ├── gradlew.bat
+    ├── .github/workflows/
+    └── README.md
+
+------------------------------------------------------------------------
+
+## omandi Base di Sistema
+
+### Clonare il repository
+
+    git clone https://github.com/enzodig11/Dama-java.git
+    cd Dama-java
+
+### Compilare il progetto
+
+    ./gradlew build
+
+### Eseguire i test
+
+    ./gradlew test
+
+### Avviare l'applicazione
+
+    ./gradlew run
+
+### Pulire la build
+
+    ./gradlew clean
+
+------------------------------------------------------------------------
+
+## Comandi di Gioco (CLI)
+
+Una volta avviata l'applicazione, è possibile utilizzare i seguenti
+comandi:
+
+    gioca        → Avvia una nuova partita
+    esci         → Termina l’applicazione
+    abbandona    → Abbandona la partita corrente
+    numeri       → Mostra numerazione della scacchiera
+    tempo        → Visualizza il tempo di gioco
+    damiera      → Mostra la scacchiera corrente
+    prese        → Mostra le catture disponibili
+
+### Notazione delle Mosse
+
+Le mosse devono essere inserite in **notazione algebrica**:
+
+-   Spostamento semplice:\
+    Esempio → `1-5`
+
+-   Spostamento con presa semplice:\
+    Esempio → `18x11`
+
+-   Spostamento con presa multipla:\
+    Esempio → `22x15x6`
+
+Dopo aver digitato un comando o una mossa, il sistema aggiorna
+automaticamente lo stato della partita.
+
+------------------------------------------------------------------------
+
+## Qualità del Codice
+
+Il progetto integra:
+
+-   Integrazione Continua con GitHub Actions\
+-   Analisi della copertura del codice con JaCoCo\
+-   Analisi statica con Checkstyle e SpotBugs\
+-   Test automatici con JUnit
+
+------------------------------------------------------------------------
+
+## Competenze Dimostrate
+
+-   Programmazione Orientata agli Oggetti (OOP)\
+-   Modellazione della logica di gioco\
+-   Testing automatico\
+-   Integrazione Continua (CI/CD)\
+-   Gestione build con Gradle
+
+------------------------------------------------------------------------
+
+## Autore
+
+Vincenzo Digioia\
+Junior Software Engineer\
+GitHub: https://github.com/enzodig11
