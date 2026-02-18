@@ -2,17 +2,20 @@
 
 ## Descrizione del Progetto
 
-Questo progetto rappresenta un'implementazione completa del gioco della
-**Dama Italiana**, sviluppata in Java nell'ambito di un corso di
-Ingegneria del Software.
+Questo progetto rappresenta un'implementazione completa del gioco della "Dama Italiana", sviluppata in Java.
 
-L'applicazione implementa le regole ufficiali del gioco, inclusi: -
-Movimenti validi - Catture obbligatorie - Promozione a dama -
-Determinazione della vittoria
+L'applicazione implementa le regole ufficiali del gioco, inclusi: 
+- Movimenti validi 
+- Catture obbligatorie
+- Promozione a dama
+- Determinazione della vittoria
 
-Il progetto segue principi di: - Programmazione Orientata agli Oggetti
-(OOP) - Clean Code - Testing automatico - Integrazione Continua
-(CI/CD) - Analisi statica del codice
+Il progetto segue principi di: 
+- Programmazione Orientata agli Oggetti (OOP)
+- Clean Code
+- Testing automatico
+- Integrazione Continua (CI/CD)
+- Analisi statica del codice
 
 ------------------------------------------------------------------------
 
@@ -71,8 +74,7 @@ Il progetto segue principi di: - Programmazione Orientata agli Oggetti
 
 ## Comandi di Gioco (CLI)
 
-Una volta avviata l'applicazione, è possibile utilizzare i seguenti
-comandi:
+Una volta avviata l'applicazione, è possibile utilizzare i seguenti comandi:
 
     gioca        → Avvia una nuova partita
     esci         → Termina l’applicazione
@@ -84,7 +86,7 @@ comandi:
 
 ### Notazione delle Mosse
 
-Le mosse devono essere inserite in **notazione algebrica**:
+Le mosse devono essere inserite in "notazione algebrica":
 
 -   Spostamento semplice:\
     Esempio → `1-5`
@@ -95,8 +97,7 @@ Le mosse devono essere inserite in **notazione algebrica**:
 -   Spostamento con presa multipla:\
     Esempio → `22x15x6`
 
-Dopo aver digitato un comando o una mossa, il sistema aggiorna
-automaticamente lo stato della partita.
+Dopo aver digitato un comando o una mossa, il sistema aggiorna automaticamente lo stato della partita.
 
 ------------------------------------------------------------------------
 
@@ -108,16 +109,6 @@ Il progetto integra:
 -   Analisi della copertura del codice con JaCoCo\
 -   Analisi statica con Checkstyle e SpotBugs\
 -   Test automatici con JUnit
-
-------------------------------------------------------------------------
-
-## Competenze Dimostrate
-
--   Programmazione Orientata agli Oggetti (OOP)\
--   Modellazione della logica di gioco\
--   Testing automatico\
--   Integrazione Continua (CI/CD)\
--   Gestione build con Gradle
 
 ------------------------------------------------------------------------
 
